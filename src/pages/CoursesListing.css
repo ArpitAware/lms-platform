@@ -1,0 +1,16 @@
+.courselist-outer {
+  background-color: #000814;
+  color: white;
+  padding: 20px 1.5rem;
+}
+
+.courselist-inner {
+
+}
+
+.courseCardContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+}
