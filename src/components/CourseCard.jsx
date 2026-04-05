@@ -12,7 +12,7 @@ function CourseCard({course}) {
       <div className="courseCard-text">
         <h3>{course.title}</h3>
         <p className="category">{course.category}</p>
-        <p>{course.description}</p>
+        <p>{course.description.substring(0,40)}</p>
         <p>
           <b>{course.instructor}</b>
         </p>

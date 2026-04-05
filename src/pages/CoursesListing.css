@@ -4,8 +4,8 @@
   padding: 20px 1.5rem;
 }
 
-.courselist-inner {
-
+.courselist-inner h1{
+  text-align: center;
 }
 
 .courseCardContainer{
@@ -13,4 +13,17 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1.5rem;
   padding: 1rem 1.5rem;
+  margin: 30px 1rem;
+}
+
+.myCourses{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  margin: 30px 1rem;
+}
+
+.courselist-inner h1:nth-child(3) {
+  margin-top: 80px;
 }
