@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "./Signup.css";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -32,70 +33,100 @@ const Signup = () => {
   };
 
   return (
-    <div>
+    <div className="Profile-form">
+      <div className="logo">
+        <i className="fa-solid fa-graduation-cap"></i>
+        <h2>Grow LMS</h2>
+      </div>
+      <h1>Create Account</h1>
+      <p>Join us and start your learning journey</p>
       <form onSubmit={handleSubmit} action="">
-        <label htmlFor="fName">First Name</label>
-        <input
-          type="text"
-          name="fname"
-          value={fname}
-          id="fName"
-          placeholder="Enter Your First Name"
-          onChange={handleChange}
-          required
-        />
-        <label htmlFor="lName">Last Name</label>
-        <input
-          type="text"
-          name="lname"
-          value={lname}
-          id="lName"
-          placeholder="Enter Your Last Name"
-          onChange={handleChange}
-          required
-        />
-        <label htmlFor="email">Email Address</label>
-        <input
-          type="email"
-          name="email"
-          value={email}
-          id="email"
-          placeholder="Enter Your email"
-          onChange={handleChange}
-          required
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          value={password}
-          id="password"
-          placeholder="Enter Your Password"
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="checkbox"
-          name="term"
-          id="term"
-          checked={checked}
-          onChange={(e) => setChecked(e.target.checked)}
-          required
-        />
-        <label htmlFor="term">
-          I agree to the Terms of Service and Privacy Policy
-        </label>
+        <div>
+          {" "}
+          <label htmlFor="fName">First Name</label>
+          <input
+            type="text"
+            name="fname"
+            value={fname}
+            id="fName"
+            placeholder="Enter Your First Name"
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div>
+          {" "}
+          <label htmlFor="lName">Last Name</label>
+          <input
+            type="text"
+            name="lname"
+            value={lname}
+            id="lName"
+            placeholder="Enter Your Last Name"
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email Address</label>
+          <input
+            type="email"
+            name="email"
+            value={email}
+            id="email"
+            placeholder="Enter Your email"
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            value={password}
+            id="password"
+            placeholder="Enter Your Password"
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div id="check-box">
+          <input
+            type="checkbox"
+            name="term"
+            id="term"
+            checked={checked}
+            onChange={(e) => setChecked(e.target.checked)}
+            required
+          />
+          <label htmlFor="term">
+            I agree to the <a href="#">Terms of Service</a> and{" "}
+            <a href="#">Privacy Policy</a>
+          </label>
+        </div>
 
         <button type="submit">Create Account</button>
       </form>
       <p>Or Sign Up With</p>
 
       <div>
-        <button>google</button>
-        <button>Github</button>
+        <div className="social-buttons">
+          <button className="google-btn">
+            <i className="fa-brands fa-google"></i> Google
+          </button>
+
+          <button className="github-btn">
+            <i className="fa-brands fa-github"></i> GitHub
+          </button>
+        </div>
       </div>
 
-      <p>Already hava an account? Sign In</p>
+      <p className="bottom-text">
+        Already have an account? <a href="#">Sign In</a>
+      </p>
     </div>
   );
 };

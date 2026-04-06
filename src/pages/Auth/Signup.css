@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0f172a;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.Profile-form {
+  background: #1e293b;
+  padding: 30px 40px;
+  width: 380px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: #e2e8f0;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.logo i {
+  font-size: 42px;
+  color: #6366f1;
+  margin-bottom: 5px;
+}
+
+.logo h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+/* Heading */
+.Profile-form h1 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.Profile-form p {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+form div {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 13px;
+  color: #cbd5f5;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #e2e8f0;
+  outline: none;
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: #64748b;
+}
+
+input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 6px rgba(99, 102, 241, 0.5);
+}
+
+/* Checkbox */
+#check-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#check-box input {
+  width: auto;
+}
+
+#check-box label {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* Links */
+a {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #818cf8;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #4f46e5;
+}
+
+/* Social Buttons */
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.social-buttons button {
+  width: 48%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* Google */
+.google-btn {
+  background: #fff;
+  color: #000;
+}
+
+.google-btn:hover {
+  background: #e5e7eb;
+}
+
+/* GitHub */
+.github-btn {
+  background: #111827;
+  color: #fff;
+  border: 1px solid #374151;
+}
+
+.github-btn:hover {
+  background: #1f2937;
+}
+
+/* Bottom Text */
+.bottom-text {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 420px) {
+  .Profile-form {
+    width: 90%;
+    padding: 25px;
+  }
+}
