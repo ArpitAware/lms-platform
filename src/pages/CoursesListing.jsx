@@ -16,10 +16,20 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
+//import icons
+import { BiSolidSkipPreviousCircle } from "react-icons/bi";
+import { BiSolidSkipNextCircle } from "react-icons/bi";
+
+
+
 function CoursesListing() {
   //ab yaha category ke liye state banayege
   const [cat, setCat] = useState("all");
   const [price, setPrice] = useState(2000)
+
+  //yaha pagination ke liye states
+  const [currentPage, setCurrentPage] = useState(1)
+  
 
 
   console.log(courseCardsArray);
@@ -58,11 +68,19 @@ function CoursesListing() {
 
   console.log(filteredCoursesArray);
 
-  let totalCards = filteredCoursesArray.length;
-  console.log(totalCards)
 
 
   //pagination ka kaam
+  const totalCards = filteredCoursesArray.length;
+  const coursePerPage = 8;
+  const totalPages = Math.floor(totalCards / coursePerPage);
+
+  const startIndex = (currentPage - 1) * coursePerPage;
+  const endIndex = startIndex + coursePerPage;
+
+  const currentPageCourses = filteredCoursesArray.slice(startIndex,endIndex);
+  console.log(currentPageCourses)
+
   
 
 
@@ -145,8 +163,14 @@ function CoursesListing() {
 
         <div className="myCourses">
           {
-            filteredCoursesArray.map((course, index) => {
+            //category filter ke liye ye chalaya tha but
+            //filteredCoursesArray.map((course, index) => {
 
+              //return <CourseCard key={index} course={course} />;
+            //})
+            
+            //ab current page par jo courses wo map krwa diye
+            currentPageCourses.map((course, index) => {
               return <CourseCard key={index} course={course} />;
             })
 
@@ -154,6 +178,12 @@ function CoursesListing() {
 
         </div>
 
+            
+        <div className="paginationBox">
+          <button disabled={currentPage === 1} className='paginationBtn' onClick={()=>{setCurrentPage(currentPage - 1)}} ><BiSolidSkipPreviousCircle/> Prev</button>
+          <p id='currentPageText'>{currentPage}</p>
+          <button disabled={currentPage === totalCards} className='paginationBtn' onClick={()=>{setCurrentPage(currentPage + 1)}} >Next <BiSolidSkipNextCircle/></button>
+        </div>
         
       </div>
     </div>
