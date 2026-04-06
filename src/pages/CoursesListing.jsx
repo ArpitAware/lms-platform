@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import './CoursesListing.css'
 
 //import cardsArrayData
-import {courseCardsArray} from '../data/courses.js'
+// import {courseCardsArray} from '../data/courses.js'
+import {courseCardsArray} from '../data/courseData.js'
 import CourseCard from '../components/CourseCard.jsx';
 
 //import swiper things for slider
@@ -18,7 +19,7 @@ import 'swiper/css/scrollbar';
 function CoursesListing() {
   //ab yaha category ke liye state banayege
   const [cat, setCat] = useState("all");
-  const [price, setPrice] = useState(1000)
+  const [price, setPrice] = useState(2000)
 
 
   console.log(courseCardsArray);
@@ -62,13 +63,8 @@ function CoursesListing() {
 
 
   //pagination ka kaam
-  let pageCount = 1;
-  while(totalCards > 6){
-    ++pageCount;
-    totalCards = totalCards - 6;
-  }
+  
 
-  console.log(pageCount);
 
   
 
@@ -135,8 +131,8 @@ function CoursesListing() {
                 id="priceRange"
                 type="range"
                 min={0}
-                max={1000}
-                step={1}
+                max={2000}
+                step={20}
                 value={price}
                 onChange={(e) => {
                   handlePriceRange(e);
@@ -150,6 +146,7 @@ function CoursesListing() {
         <div className="myCourses">
           {
             filteredCoursesArray.map((course, index) => {
+
               return <CourseCard key={index} course={course} />;
             })
 
@@ -157,12 +154,7 @@ function CoursesListing() {
 
         </div>
 
-        <div className="paginationBox">
-          <button>Prev</button>
-          <p>{filteredCoursesArray.length}</p>
-          <p>{pageCount}</p>
-          <button>Next</button>
-        </div>
+        
       </div>
     </div>
   );

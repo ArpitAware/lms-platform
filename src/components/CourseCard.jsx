@@ -10,9 +10,9 @@ function CourseCard({course}) {
         <img height={"150px"} src={course.thumbnail} alt="" />
       </div>
       <div className="courseCard-text">
-        <h3>{course.title}</h3>
+        <h3>{course.title.substring(0,25)}...</h3>
         <p className="category">{course.category}</p>
-        <p>{course.description.substring(0,40)}</p>
+        <p>{course.description.substring(0,35)}</p>
         <p>
           <b>{course.instructor}</b>
         </p>
