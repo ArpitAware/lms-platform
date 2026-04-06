@@ -3,7 +3,7 @@ import './CourseCard.css'
 
 function CourseCard({course}) {
 
-  console.log(course)
+  // console.log(course)
   return (
     <div className='courseCard'>
       <div className="courseCard-imgBox">

@@ -27,3 +27,14 @@
 .courselist-inner h1:nth-child(3) {
   margin-top: 80px;
 }
+
+.filterContainer {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.paginationBox  {
+  color: #fff;
+  background-color: red;
+}
